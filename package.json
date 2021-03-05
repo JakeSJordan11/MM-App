@@ -1,17 +1,33 @@
 {
-  "dependencies": {
-    "next": "^10.0.7",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
-  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "generate": "yarn generate:prisma",
+    "generate:prisma": "yarn prisma generate"
+  },
+  "prisma": {
+    "schema": "./schema.prisma"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.3.11",
+    "@nexus/schema": "^0.20.1",
+    "@prisma/client": "2.17.0",
+    "apollo-server-micro": "^2.21.0",
+    "graphql": "^15.5.0",
+    "graphql-middleware": "^6.0.4",
+    "graphql-middleware-error-handler": "^0.4.1",
+    "graphql-scalars": "^1.8.0",
+    "next": "^10.0.7",
+    "nexus": "^1.0.0",
+    "nexus-plugin-prisma": "^0.31.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   },
   "devDependencies": {
     "@types/node": "^14.14.31",
     "@types/react": "^17.0.2",
+    "prisma": "^2.18.0",
     "typescript": "^4.2.2"
   }
 }
